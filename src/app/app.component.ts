@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'thThayDoiFontSize';
+  title = 'Bài tập về tổng quan angular';
 }

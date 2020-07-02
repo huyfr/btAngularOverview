@@ -1,0 +1,30 @@
+<h3>Edit profile</h3>
+<h3>Cách 1: </h3>
+<div>
+  <label>Pet name:
+    <input type="text" (change)="updateName($event.target.value)">
+  </label>
+  <br>
+  <label>Pet name:
+    <input type="url" (change)="updateImage($event.target.value)">
+  </label>
+  <br>
+  <h3>Pet name: {{petName}}</h3>
+  <img [src]="petImage">
+</div>
+<h3>Cách 2: </h3>
+<div>
+  <label>Pet name:
+  <input [(ngModel)]="pet.name">
+  </label>
+  <br>
+  <label>Pet image:
+  <input [(ngModel)]="pet.image">
+  </label>
+  <br>
+  <h3>Pet profile</h3>
+</div>
+<div><span>Name: </span>{{pet.name | uppercase}}</div>
+<div>
+  <img [src]="pet.image">
+</div>
