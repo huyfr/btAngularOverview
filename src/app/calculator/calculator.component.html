@@ -1,20 +1,30 @@
-<h2>Calculator</h2>
-<div class="form-group">
-  <label for="first"> Số thứ nhất</label>
-  <input id="first" type="number" class="form-control" [value]="first" (change)="setFirst($event.target.value)">
+<div class="ui inverted segment">
+  <h2>Calculator</h2>
+  <div class="ui inverted form">
+    <div class="three fields">
+      <div class="field">
+        <label for="first"> Số thứ nhất: </label>
+        <input id="first" type="number" class="form-control" [value]="first" (change)="setFirst($event.target.value)">
+      </div>
 
-  <label for="operator">Toán tử</label>
-  <select id="operator" class="form-control" [value]="operator" (change)="setOperator($event.target.value)">
-    <option value="+">+</option>
-    <option value="-">-</option>
-    <option value="*">*</option>
-    <option value="/">/</option>
-  </select>
+      <div class="field">
+        <label for="operator">Toán tử</label>
+        <select id="operator" class="form-control" [value]="operator" (change)="setOperator($event.target.value)">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </div>
 
-  <label for="second"> Số thứ hai</label>
-  <input id="second" type="number" class="form-control" [value]="second" (change)="setSecond($event.target.value)">
+      <div class="field">
+        <label for="second"> Số thứ hai</label>
+        <input id="second" type="number" class="form-control" [value]="second" (change)="setSecond($event.target.value)">
+      </div>
+    </div>
 
-  <button class="btn btn-danger" (click)="calculate()">Tính toán</button>
+    <div class="ui submit button" (click)="calculate()">Tính toán</div>
+  </div>
 </div>
 <div>
   {{output}}

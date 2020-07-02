@@ -1,17 +1,9 @@
-<div style="text-align:center">
-  <h1>{{ title }}!</h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="ui left fixed vertical menu">
+  <a class="item" routerLink="/font-size">[Thực hành] Chức năng thay đổi font-size</a>
+  <a class="item" routerLink="/pet">[Thực hành] Hiển thị thông tin thú nuôi</a>
+  <a class="item" routerLink="/calculator">[Bài tập] Ứng dụng calculator</a>
+  <a class="item" routerLink="/color-picker">[Bài tập] Ứng dụng chọn màu</a>
 </div>
-<h2>[Thực hành] Chức năng thay đổi font-size: </h2>
-<a routerLink="/font-size">[Thực hành] Chức năng thay đổi font-size</a>
-<!--<app-font-size-editor></app-font-size-editor>-->
-<h2>[Thực hành] Hiển thị thông tin thú nuôi</h2>
-<a routerLink="/pet">[Thực hành] Hiển thị thông tin thú nuôi</a>
-<!--<app-pet></app-pet>-->
-<h2>[Bài tập] Ứng dụng calculator</h2>
-<a routerLink="/calculator">[Bài tập] Ứng dụng calculator</a>
-
-<h2>[Bài tập] Ứng dụng chọn màu</h2>
-<a routerLink="/color-picker">[Bài tập] Ứng dụng chọn màu</a>
-
-<router-outlet></router-outlet>
+<div class="ui segment" style="margin-left: 210px">
+  <router-outlet></router-outlet>
+</div>

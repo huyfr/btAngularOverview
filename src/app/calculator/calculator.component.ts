@@ -10,14 +10,14 @@ export class CalculatorComponent implements OnInit {
   output: number;
   first: number;
   second: number;
-  operator = '+';
+  operator = '';
 
   setFirst(value) {
-    this.first = value;
+    this.first = Number(value);
   }
 
   setSecond(value) {
-    this.second = value;
+    this.second = Number(value);
   }
 
   setOperator(value) {
