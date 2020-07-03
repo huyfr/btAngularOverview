@@ -24,9 +24,34 @@ export class HackerNewsComponent implements OnInit {
       }
     );
   }
+
   onSelect(article: Article): void {
     this.selectedArticle = article;
     console.log(`selectedArticle = ${JSON.stringify(this.selectedArticle)}`);
+  }
+
+  setTitleFromService(title) {
+    this.articleService.setTitle(title);
+  }
+
+  getTitleFromService() {
+    return this.articleService.getUrl();
+  }
+
+  setUrlFromService(url) {
+    this.articleService.setUrl(url);
+  }
+
+  getUrlFromService() {
+    return this.articleService.getUrl();
+  }
+
+  saveArticleFromService(): void {
+    this.articleService.save();
+  }
+
+  save(): void {
+    this.articleService.save();
   }
 
   ngOnInit() {

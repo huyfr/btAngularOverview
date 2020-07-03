@@ -1,5 +1,22 @@
 <div>
-  <h3>Today's article</h3>
+  <div class="ui secondary menu">
+    <h3>Today's article</h3>
+  </div>
+
+    <div class="ui large form">
+      <div class="two fields">
+        <div class="field">
+          <label>Title</label>
+          <input placeholder="Title" type="text" id="title">
+        </div>
+        <div class="field">
+          <label>URL</label>
+          <input placeholder="URL" type="text" id="url">
+        </div>
+      </div>
+      <div class="ui submit button" (click)="save()">Submit</div>
+    </div>
+
   <app-article-detail [article]="selectedArticle"></app-article-detail>
 
   <div *ngFor="let eachArticle of articles" (click)="onSelect(eachArticle)" [class.selected]="eachArticle === selectedArticle">
