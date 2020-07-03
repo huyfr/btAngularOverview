@@ -1,0 +1,9 @@
+<div>
+  <h3>Today's article</h3>
+  <app-article-detail [article]="selectedArticle"></app-article-detail>
+
+  <div *ngFor="let eachArticle of articles" (click)="onSelect(eachArticle)" [class.selected]="eachArticle === selectedArticle">
+    <hr>
+    <a href="{{eachArticle.url}}" target="_blank">{{eachArticle.title}}</a>
+  </div>
+</div>

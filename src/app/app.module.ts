@@ -8,6 +8,9 @@ import { PetComponent } from './pet/pet.component';
 import {FormsModule} from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { HackerNewsComponent } from './hacker-news/hacker-news.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
+import {ArticleService} from './article.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +18,16 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
     FontSizeEditorComponent,
     PetComponent,
     CalculatorComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    HackerNewsComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

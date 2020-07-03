@@ -1,0 +1,23 @@
+<div *ngIf="article">
+  <table class="ui celled table">
+    <thead>
+    <tr>
+      <th colspan="2">{{article.title}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="collapsing">Tiêu đề</td>
+      <td><input type="text" style="width: 100%" [(ngModel)]="article.title"></td>
+    </tr>
+    <tr>
+      <td>Link</td>
+      <td><input type="text" style="width: 100%" [(ngModel)]="article.url"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Submit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
