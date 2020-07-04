@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Article} from '../../models/article';
 import {ArticleService} from '../article.service';
+import {MatDialog} from '@angular/material/dialog';
+import {CreateHackerNewsComponent} from '../create-hacker-news/create-hacker-news.component';
 
 @Component({
   selector: 'app-hacker-news',
@@ -9,7 +11,8 @@ import {ArticleService} from '../article.service';
 })
 export class HackerNewsComponent implements OnInit {
 
-  constructor(private articleService: ArticleService) {
+  constructor(private articleService: ArticleService,
+              public dialog: MatDialog) {
   }
 
   articles: Article[];
@@ -38,4 +41,15 @@ export class HackerNewsComponent implements OnInit {
     this.getArticleFromService();
   }
 
+  openCreateForm(): void {
+    this.dialog.open(CreateHackerNewsComponent);
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CreateHackerNewsComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }

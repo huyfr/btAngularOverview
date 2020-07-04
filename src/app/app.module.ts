@@ -12,6 +12,11 @@ import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import {ArticleService} from './article.service';
 import { LikesComponent } from './likes/likes.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateHackerNewsComponent } from './create-hacker-news/create-hacker-news.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,14 +27,20 @@ import { LikesComponent } from './likes/likes.component';
     ColorPickerComponent,
     HackerNewsComponent,
     ArticleDetailComponent,
-    LikesComponent
+    LikesComponent,
+    CreateHackerNewsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NoopAnimationsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [ArticleService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: []
 })
 export class AppModule { }

@@ -3,6 +3,10 @@
     <h3>Today's article</h3>
   </div>
 
+<!--  <button mat-raised-button (click)="openCreateForm()">Thêm mới</button>-->
+
+<!--  <button mat-button (click)="openDialog()">Open dialog</button>-->
+
     <div class="ui large form">
       <div class="two fields">
         <div class="field">
@@ -19,9 +23,21 @@
 
   <app-article-detail [article]="selectedArticle"></app-article-detail>
 
-  <div *ngFor="let eachArticle of articles" (click)="onSelect(eachArticle)" [class.selected]="eachArticle === selectedArticle">
-    <hr>
-    <a href="{{eachArticle.url}}" target="_blank">{{eachArticle.title}}</a>
-    <app-likes></app-likes>
-  </div>
+  <table class="ui celled table">
+    <thead>
+    <tr>
+      <th>Bài viết</th>
+      <th>Thích</th>
+      <th>Tùy chọn</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let eachArticle of articles" (click)="onSelect(eachArticle)" [class.selected]="eachArticle === selectedArticle">
+      <td><a href="{{eachArticle.url}}" target="_blank">{{eachArticle.title}}</a></td>
+      <td><app-likes></app-likes></td>
+      <td><i class="edit icon"></i> | <i class="trash alternate outline icon"></i></td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
