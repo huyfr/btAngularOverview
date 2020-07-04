@@ -11,6 +11,7 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
 import {ArticleService} from './article.service';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {ArticleService} from './article.service';
     CalculatorComponent,
     ColorPickerComponent,
     HackerNewsComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    LikesComponent
   ],
   imports: [
     BrowserModule,

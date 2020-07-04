@@ -11,11 +11,6 @@ export class ArticleService {
   constructor() {
   }
 
-  article: Article = {
-    title: '',
-    url: ''
-  };
-
   ListArticle: Article[] = [
     {
       title: 'The Evolution of Async JavaScript: From Callbacks, to Promises, to Async/Await',
@@ -43,25 +38,12 @@ export class ArticleService {
     return of(this.ListArticle);
   }
 
-  setTitle(title) {
-    this.article.title = title;
-  }
-
-  getTitle() {
-     return this.article.title;
-  }
-
-  setUrl(url) {
-    this.article.url = url;
-  }
-
-  getUrl() {
-    return this.article.url;
-  }
-
   save(): void {
-    this.ListArticle.push(
-      {title: String(document.getElementById('title').value), url: String(document.getElementById('url').value)}
-      );
+    const newTitle = (document.getElementById('title') as HTMLInputElement).value;
+    const newUrl = (document.getElementById('url') as HTMLInputElement).value;
+    const article = new Article();
+    article.title = newTitle;
+    article.url = newUrl;
+    this.ListArticle.push(article);
   }
 }
