@@ -9,6 +9,12 @@ export class LikesComponent implements OnInit {
 
   constructor() { }
 
+  likes = 0;
+
+  clickLikes(): void {
+    this.likes++;
+  }
+
   ngOnInit(): void {
   }
 
