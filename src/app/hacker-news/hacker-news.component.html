@@ -10,7 +10,7 @@
     <tr>
       <th>Bài viết</th>
       <th>Thích</th>
-      <th>Tùy chọn</th>
+      <th colspan="2">Tùy chọn</th>
     </tr>
     </thead>
     <tbody>
@@ -18,7 +18,16 @@
       <td hidden>{{eachArticle.id}}</td>
       <td><a href="{{eachArticle.url}}" target="_blank">{{eachArticle.title}}</a></td>
       <td><app-likes></app-likes></td>
-      <td><i class="edit icon" (click)="onSelect(eachArticle)" ></i> | <i class="trash alternate outline icon" (click)="deleteArticleFromService(eachArticle.id)"></i></td>
+      <td>
+        <button mat-icon-button (click)="onSelect(eachArticle)">
+          <mat-icon>border_color</mat-icon>
+        </button>
+      </td>
+      <td>
+        <button mat-icon-button (click)="deleteArticleFromService(eachArticle.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>
