@@ -20,6 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import { NameCardComponent } from './name-card/name-card.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -32,19 +34,21 @@ import {MatIconModule} from '@angular/material/icon';
     ArticleDetailComponent,
     LikesComponent,
     CreateHackerNewsComponent,
+    NameCardComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        NoopAnimationsModule,
-        MatDialogModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NoopAnimationsModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule
+  ],
   providers: [ArticleService],
   bootstrap: [AppComponent],
   entryComponents: [CreateHackerNewsComponent, ArticleDetailComponent]

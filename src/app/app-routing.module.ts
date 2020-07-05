@@ -5,13 +5,15 @@ import {FontSizeEditorComponent} from './font-size-editor/font-size-editor.compo
 import {CalculatorComponent} from './calculator/calculator.component';
 import {ColorPickerComponent} from './color-picker/color-picker.component';
 import {HackerNewsComponent} from './hacker-news/hacker-news.component';
+import {NameCardComponent} from './name-card/name-card.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
   {path: 'font-size', component: FontSizeEditorComponent},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'color-picker', component: ColorPickerComponent},
-  {path: 'news', component: HackerNewsComponent}
+  {path: 'news', component: HackerNewsComponent},
+  {path: 'name-card', component: NameCardComponent}
   ];
 
 @NgModule({
