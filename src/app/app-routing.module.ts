@@ -6,6 +6,7 @@ import {CalculatorComponent} from './calculator/calculator.component';
 import {ColorPickerComponent} from './color-picker/color-picker.component';
 import {HackerNewsComponent} from './hacker-news/hacker-news.component';
 import {NameCardComponent} from './name-card/name-card.component';
+import {ProgressBarComponent} from './progress-bar/progress-bar.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'calculator', component: CalculatorComponent},
   {path: 'color-picker', component: ColorPickerComponent},
   {path: 'news', component: HackerNewsComponent},
-  {path: 'name-card', component: NameCardComponent}
+  {path: 'name-card', component: NameCardComponent},
+  {path: 'progress-bar', component: ProgressBarComponent}
   ];
 
 @NgModule({

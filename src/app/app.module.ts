@@ -22,6 +22,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { NameCardComponent } from './name-card/name-card.component';
 import {MatCardModule} from '@angular/material/card';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import {MatCardModule} from '@angular/material/card';
     LikesComponent,
     CreateHackerNewsComponent,
     NameCardComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressBarModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent],
