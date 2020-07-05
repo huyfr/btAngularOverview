@@ -61,6 +61,20 @@ export class ArticleService {
   }
 
   delete(id: number): void {
-    this.ListArticle.filter(value => value.id !== id);
+    const index = this.findIndexById(id);
+    if (index > -1) {
+      this.ListArticle.splice(index, 1);
+    }
+  }
+
+  findIndexById(id: number): number {
+    let index = -1;
+    for (let i = 0; i<this.ListArticle.length; i++) {
+      if (this.ListArticle[i].id === id) {
+        index = i;
+        break;
+      }
+    }
+    return index;
   }
 }
