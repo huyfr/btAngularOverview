@@ -3,25 +3,7 @@
     <h3>Today's article</h3>
   </div>
 
-<!--  <button mat-raised-button (click)="openCreateForm()">Thêm mới</button>-->
-
-<!--  <button mat-button (click)="openDialog()">Open dialog</button>-->
-
-    <div class="ui large form">
-      <div class="two fields">
-        <div class="field">
-          <label>Title</label>
-          <input placeholder="Title" type="text" id="title">
-        </div>
-        <div class="field">
-          <label>URL</label>
-          <input placeholder="URL" type="text" id="url">
-        </div>
-      </div>
-      <div class="ui submit button" (click)="saveArticleFromService()">Submit</div>
-    </div>
-
-  <app-article-detail [article]="selectedArticle"></app-article-detail>
+  <button mat-raised-button (click)="openCreateForm()">Thêm mới</button>
 
   <table class="ui celled table">
     <thead>
@@ -32,10 +14,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let eachArticle of articles" (click)="onSelect(eachArticle)" [class.selected]="eachArticle === selectedArticle">
+    <tr *ngFor="let eachArticle of articles" [class.selected]="eachArticle === selectedArticle">
+      <td hidden>{{eachArticle.id}}</td>
       <td><a href="{{eachArticle.url}}" target="_blank">{{eachArticle.title}}</a></td>
       <td><app-likes></app-likes></td>
-      <td><i class="edit icon"></i> | <i class="trash alternate outline icon"></i></td>
+      <td><i class="edit icon" (click)="onSelect(eachArticle)" ></i> | <i class="trash alternate outline icon" (click)="deleteArticleFromService(eachArticle.id)"></i></td>
     </tr>
     </tbody>
   </table>

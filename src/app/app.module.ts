@@ -17,6 +17,8 @@ import { CreateHackerNewsComponent } from './create-hacker-news/create-hacker-ne
 import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -37,10 +39,12 @@ import {MatButtonModule} from '@angular/material/button';
     NoopAnimationsModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent],
-  entryComponents: []
+  entryComponents: [CreateHackerNewsComponent, ArticleDetailComponent]
 })
 export class AppModule { }

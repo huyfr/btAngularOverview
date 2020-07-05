@@ -1,19 +1,26 @@
-<div *ngIf="article">
-  <table class="ui celled table">
-    <thead>
+<form class="form-size">
+  <table class="full-width">
     <tr>
-      <th colspan="2">{{article.title}}</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td class="collapsing">Tiêu đề</td>
-      <td><input type="text" style="width: 100%" [(ngModel)]="article.title" id="title"></td>
+      <td mat-dialog-title>{{data.title}}</td>
     </tr>
     <tr>
-      <td>Link</td>
-      <td><input type="text" style="width: 100%" [(ngModel)]="article.url" id="url"></td>
+      <td>
+        <mat-form-field class="full-width">
+          <mat-label>Tiêu đề</mat-label>
+          <input matInput type="text" id="title" [value]="data.title">
+        </mat-form-field>
+      </td>
+    <tr>
+      <td>
+        <mat-form-field class="full-width">
+          <mat-label>URL</mat-label>
+          <input matInput type="url" id="url" [value]="data.url">
+        </mat-form-field>
+      </td>
     </tr>
-    </tbody>
   </table>
-</div>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Hủy</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="putArticleFromService(data)">Sửa</button>
+  </mat-dialog-actions>
+</form>

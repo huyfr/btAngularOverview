@@ -3,6 +3,7 @@ import {Article} from '../../models/article';
 import {ArticleService} from '../article.service';
 import {MatDialog} from '@angular/material/dialog';
 import {CreateHackerNewsComponent} from '../create-hacker-news/create-hacker-news.component';
+import {ArticleDetailComponent} from '../article-detail/article-detail.component';
 
 @Component({
   selector: 'app-hacker-news',
@@ -30,11 +31,8 @@ export class HackerNewsComponent implements OnInit {
 
   onSelect(article: Article): void {
     this.selectedArticle = article;
+    this.openEditForm();
     console.log(`selectedArticle = ${JSON.stringify(this.selectedArticle)}`);
-  }
-
-  saveArticleFromService(): void {
-    this.articleService.save();
   }
 
   ngOnInit() {
@@ -42,14 +40,30 @@ export class HackerNewsComponent implements OnInit {
   }
 
   openCreateForm(): void {
-    this.dialog.open(CreateHackerNewsComponent);
-  }
+    const dialogRef = this.dialog.open(CreateHackerNewsComponent, {
 
-  openDialog() {
-    const dialogRef = this.dialog.open(CreateHackerNewsComponent);
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  openEditForm(): void {
+    const dialogRef = this.dialog.open(ArticleDetailComponent, {
+      data: {
+        id: this.selectedArticle.id,
+        title: this.selectedArticle.title,
+        url: this.selectedArticle.url
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  deleteArticleFromService(id: number) {
+    this.articleService.delete(id);
   }
 }

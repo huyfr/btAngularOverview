@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ArticleService} from '../article.service';
 
 @Component({
   selector: 'app-create-hacker-news',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateHackerNewsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
+  }
+
+  saveArticleFromService(): void {
+    this.articleService.save();
   }
 
 }

@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {Article} from '../../models/article';
+import {ArticleService} from '../article.service';
 
 @Component({
   selector: 'app-article-detail',
@@ -8,10 +10,15 @@ import {Article} from '../../models/article';
 })
 export class ArticleDetailComponent implements OnInit {
 
-  @Input() article: Article;
-
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) private data: Article,
+              private articleService: ArticleService ) { }
 
   ngOnInit() {
   }
+
+  putArticleFromService(article) {
+    this.articleService.put(article);
+  }
+
+
 }
