@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
 import { PetComponent } from './pet/pet.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
@@ -27,6 +27,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
 import { CountdownTimerGetSetComponent } from './countdown-timer-get-set/countdown-timer-get-set.component';
+import { TodoApplicationComponent } from './todo-application/todo-application.component';
+import {MatListModule} from '@angular/material/list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,7 @@ import { CountdownTimerGetSetComponent } from './countdown-timer-get-set/countdo
     CountdownTimerComponent,
     RatingBarComponent,
     CountdownTimerGetSetComponent,
+    TodoApplicationComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,10 @@ import { CountdownTimerGetSetComponent } from './countdown-timer-get-set/countdo
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ReactiveFormsModule,
+    MatListModule,
+    MatCheckboxModule
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent],

@@ -1,0 +1,20 @@
+<h3>Todo app</h3>
+
+<!--  <input type="text" [formControl]="userInput"  id="content">-->
+<mat-form-field>
+  <mat-label>To do</mat-label>
+  <input matInput type="text" id="content" [formControl]="userInput">
+  <button mat-button *ngIf="userInput.value" matSuffix mat-icon-button aria-label="Clear"
+          (click)="userInput.setValue('')">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<button (click)="onClick()" mat-button="">Thêm mới</button>
+
+<div>
+  <ul>
+    <li *ngFor="let todo of todos; index as i" [class.complete]="todo.status" (click)="toggleTodo(i)">
+      {{todo.content}}
+    </li>
+  </ul>
+</div>
