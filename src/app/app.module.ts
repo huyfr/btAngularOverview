@@ -25,6 +25,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { RatingBarComponent } from './rating-bar/rating-bar.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     NameCardComponent,
     ProgressBarComponent,
     CountdownTimerComponent,
+    RatingBarComponent,
   ],
   imports: [
     BrowserModule,
