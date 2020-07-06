@@ -7,6 +7,7 @@ import {ColorPickerComponent} from './color-picker/color-picker.component';
 import {HackerNewsComponent} from './hacker-news/hacker-news.component';
 import {NameCardComponent} from './name-card/name-card.component';
 import {ProgressBarComponent} from './progress-bar/progress-bar.component';
+import {CountdownTimerComponent} from './countdown-timer/countdown-timer.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'color-picker', component: ColorPickerComponent},
   {path: 'news', component: HackerNewsComponent},
   {path: 'name-card', component: NameCardComponent},
-  {path: 'progress-bar', component: ProgressBarComponent}
+  {path: 'progress-bar', component: ProgressBarComponent},
+  {path: 'countdown-timer', component: CountdownTimerComponent}
   ];
 
 @NgModule({

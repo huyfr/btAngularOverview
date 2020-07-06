@@ -24,6 +24,7 @@ import { NameCardComponent } from './name-card/name-card.component';
 import {MatCardModule} from '@angular/material/card';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     CreateHackerNewsComponent,
     NameCardComponent,
     ProgressBarComponent,
+    CountdownTimerComponent,
   ],
   imports: [
     BrowserModule,
