@@ -1,0 +1,32 @@
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">Log-in to your account</div>
+    </h2>
+    <form class="ui form segment" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="ui stacked secondary segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" formControlName="email" placeholder="E-mail">
+          </div>
+          <div class="ui pointing red basic label" *ngIf="flag && rfc.email.errors">
+            <div *ngIf="rfc.email.errors.required">Không được để trống email</div>
+            <div *ngIf="rfc.email.errors.email">Không đúng định dạng email</div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" formControlName="password" placeholder="Password">
+          </div>
+          <div class="ui pointing red basic label" *ngIf="flag && rfc.password.errors">
+            <div *ngIf="rfc.password.errors.required">Không được để trống mật khẩu</div>
+            <div *ngIf="rfc.password.errors.minlength">Mật khẩu tối thiểu 6 ký tự</div>
+          </div>
+        </div>
+        <button class="ui fluid large teal submit button" type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

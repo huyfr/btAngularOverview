@@ -31,6 +31,7 @@ import { TodoApplicationComponent } from './todo-application/todo-application.co
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { RegisterComponent } from './register/register.component';
     CountdownTimerGetSetComponent,
     TodoApplicationComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

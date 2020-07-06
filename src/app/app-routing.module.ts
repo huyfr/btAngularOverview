@@ -11,6 +11,7 @@ import {CountdownTimerComponent} from './countdown-timer/countdown-timer.compone
 import {RatingBarComponent} from './rating-bar/rating-bar.component';
 import {TodoApplicationComponent} from './todo-application/todo-application.component';
 import {RegisterComponent} from './register/register.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'countdown-timer', component: CountdownTimerComponent},
   {path: 'rating-bar', component: RatingBarComponent},
   {path: 'todo', component: TodoApplicationComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent}
   ];
 
 @NgModule({
