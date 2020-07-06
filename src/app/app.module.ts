@@ -30,6 +30,7 @@ import { CountdownTimerGetSetComponent } from './countdown-timer-get-set/countdo
 import { TodoApplicationComponent } from './todo-application/todo-application.component';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     RatingBarComponent,
     CountdownTimerGetSetComponent,
     TodoApplicationComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

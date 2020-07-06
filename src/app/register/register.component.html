@@ -1,0 +1,79 @@
+<form class="ui form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <h4 class="ui dividing header">Đăng ký tài khoản</h4>
+
+  <div class="field">
+    <label>Email</label>
+    <input type="text" formControlName="email">
+    <div *ngIf="submitted && rfc.email.errors">
+      <div *ngIf="rfc.email.errors.required">Không được để trống email.</div>
+      <div *ngIf="rfc.email.errors.email">Email không đúng định dạng</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Password</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" formControlName="password" placeholder="Password">
+        <div *ngIf="submitted && rfc.password.errors">
+          <div *ngIf="rfc.password.errors.required">Không được để trống mật khẩu</div>
+          <div *ngIf="rfc.password.errors.minlength">Mật khẩu tối thiểu 6 ký tự</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <input formControlName="confirmPassword" placeholder="Re-Password">
+        <div *ngIf="submitted && rfc.confirmPassword.errors">
+          <div *ngIf="rfc.confirmPassword.errors.required">Không được để trống nhập lại mật khẩu</div>
+          <div *ngIf="rfc.confirmPassword.errors.mustMatch">Mật khẩu không giống nhau</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Country</label>
+    <input formControlName="country" placeholder="Country">
+    <div *ngIf="submitted && rfc.country.errors">
+      <div *ngIf="rfc.country.errors.required">Không được để trống quốc gia</div>
+    </div>
+  </div>
+
+  <div class="two fields">
+    <div class="field">
+      <label>Gender</label>
+        <select class="ui fluid dropdown" formControlName="gender">
+          <option *ngFor="let g of gender" [value]="g">{{g}}</option>
+        </select>
+      <div *ngIf="submitted && rfc.gender.errors">
+        <div *ngIf="rfc.gender.errors.required">Không được để trống giới tính</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Age</label>
+      <input formControlName="age" placeholder="Age">
+      <div *ngIf="submitted && rfc.age.errors">
+        <div *ngIf="rfc.age.errors.required">Không được để trống tuổi</div>
+        <div *ngIf="rfc.age.errors.min">Tuổi phải trên 18</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Phone</label>
+    <input formControlName="phone" placeholder="Phone">
+    <div *ngIf="submitted && rfc.phone.errors">
+      <div *ngIf="rfc.phone.errors.required">Không được để trống số điện thoại</div>
+      <div *ngIf="rfc.phone.errors.pattern">Không đúng định dạng số điện thoại</div>
+    </div>
+  </div>
+  <button class="ui button" type="submit">Đăng ký</button>
+  <button class="ui button" type="reset" (click)="onReset()">Hủy</button>
+</form>
+
+<!--[disabled]="registerForm.invalid"-->
+
+<p>{{ registerForm.value | json}}</p>
+<p>{{ registerForm.status | json}}</p>
