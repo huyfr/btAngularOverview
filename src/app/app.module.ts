@@ -26,6 +26,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
+import { CountdownTimerGetSetComponent } from './countdown-timer-get-set/countdown-timer-get-set.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RatingBarComponent } from './rating-bar/rating-bar.component';
     ProgressBarComponent,
     CountdownTimerComponent,
     RatingBarComponent,
+    CountdownTimerGetSetComponent,
   ],
   imports: [
     BrowserModule,
