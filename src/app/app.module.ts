@@ -35,6 +35,10 @@ import { LoginComponent } from './login/login.component';
 import { TimelinesComponent } from './timelines/timelines.component';
 import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import { DictionaryComponent } from './dictionary/dictionary.component';
+import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
+import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import { LoginStep1Component } from './login-step1/login-step1.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +62,10 @@ import { YoutubePlayerComponent } from './youtube-player/youtube-player.componen
     TimelinesComponent,
     YoutubePlaylistComponent,
     YoutubePlayerComponent,
+    DictionaryComponent,
+    DictionaryPageComponent,
+    DictionaryDetailComponent,
+    LoginStep1Component
   ],
   imports: [
     BrowserModule,

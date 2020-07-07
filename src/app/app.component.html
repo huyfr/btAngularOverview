@@ -1,21 +1,30 @@
 <body>
-<div class="ui left fixed vertical menu">
-  <a class="item" routerLink="/font-size">[Thực hành] Chức năng thay đổi font-size</a>
-  <a class="item" routerLink="/pet">[Thực hành] Hiển thị thông tin thú nuôi</a>
-  <a class="item" routerLink="/calculator">[Bài tập] Ứng dụng calculator</a>
-  <a class="item" routerLink="/color-picker">[Bài tập] Ứng dụng chọn màu</a>
-  <a class="item" routerLink="/news">[Thực hành] Tạo ứng dụng Hackernews</a>
-  <a class="item" routerLink="/name-card">[Thực hành] Ứng dụng Name-Card</a>
-  <a class="item" routerLink="/progress-bar">[Thực hành] Ứng dụng Progress Bar</a>
-  <a class="item" routerLink="/rating-bar">[Bài tập] Ứng dụng bình chọn</a>
-  <a class="item" routerLink="/countdown-timer">[Bài tập] Ứng dụng countdown</a>
-  <a class="item" routerLink="/todo">[Thực hành] Tạo ứng dụng todo</a>
-  <a class="item" routerLink="/register">[Bài tập] Tạo form đăng ký</a>
-  <a class="item" routerLink="/login">[Bài tập] Tạo form đăng nhập</a>
-  <a class="item" routerLink="/timelines">[Thực hành] Ứng dụng tính thời gian đã sống</a>
-  <a class="item" routerLink="/youtube">[Thực hành] Ứng dụng nghe nhạc</a>
-</div>
-<div class="ui segment" style="margin-left: 210px">
-  <router-outlet></router-outlet>
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a class="item" routerLink="/font-size">[Thực hành] Chức năng thay đổi font-size</a>
+      <a class="item" routerLink="/pet">[Thực hành] Hiển thị thông tin thú nuôi</a>
+      <a class="item" routerLink="/calculator">[Bài tập] Ứng dụng calculator</a>
+      <a class="item" routerLink="/color-picker">[Bài tập] Ứng dụng chọn màu</a>
+      <a class="item" routerLink="/news">[Thực hành] Tạo ứng dụng Hackernews</a>
+      <a class="item" routerLink="/name-card">[Thực hành] Ứng dụng Name-Card</a>
+      <a class="item" routerLink="/progress-bar">[Thực hành] Ứng dụng Progress Bar</a>
+      <a class="item" routerLink="/rating-bar">[Bài tập] Ứng dụng bình chọn</a>
+      <a class="item" routerLink="/countdown-timer">[Bài tập] Ứng dụng countdown</a>
+      <a class="item" routerLink="/todo">[Thực hành] Tạo ứng dụng todo</a>
+      <a class="item" routerLink="/register">[Bài tập] Tạo form đăng ký</a>
+      <a class="item" routerLink="/login">[Bài tập] Tạo form đăng nhập</a>
+      <a class="item" routerLink="/timelines">[Thực hành] Ứng dụng tính thời gian đã sống</a>
+      <a class="item" routerLink="/youtube">[Thực hành] Ứng dụng nghe nhạc</a>
+      <a class="item" routerLink="/dictionary1">[Bài tập] Ứng dụng từ điển 1</a>
+      <a class="item" routerLink="/dictionary2">[Bài tập] Ứng dụng từ điển 2</a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
 </body>
+

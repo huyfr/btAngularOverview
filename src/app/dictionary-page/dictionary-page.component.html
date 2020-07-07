@@ -1,0 +1,18 @@
+<h3>Từ điển</h3>
+
+<ul>
+  <li *ngFor="let word of dictionaryList">
+    <a [routerLink]="['/dictionary2', word.word]">{{word.word}}</a>
+  </li>
+</ul>
+
+<br>
+
+<router-outlet></router-outlet>
+
+<br>
+
+<div>
+  <button>Login</button>
+  <button>Logout</button>
+</div>

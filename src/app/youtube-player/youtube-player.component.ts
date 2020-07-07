@@ -16,7 +16,8 @@ export class YoutubePlayerComponent implements OnInit, OnDestroy {
 
   constructor(private youtubeService: YoutubeService,
               private  activatedRoute: ActivatedRoute,
-              private domSanitizer: DomSanitizer) { }
+              private domSanitizer: DomSanitizer) {
+  }
 
   ngOnInit(): void {
     this.sub = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
