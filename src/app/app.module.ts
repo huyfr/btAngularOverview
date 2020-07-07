@@ -39,6 +39,7 @@ import { DictionaryComponent } from './dictionary/dictionary.component';
 import { DictionaryPageComponent } from './dictionary-page/dictionary-page.component';
 import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
 import { LoginStep1Component } from './login-step1/login-step1.component';
+import {DictionaryService} from './dictionary.service';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,7 @@ import { LoginStep1Component } from './login-step1/login-step1.component';
     MatListModule,
     MatCheckboxModule
   ],
-  providers: [ArticleService],
+  providers: [ArticleService, DictionaryService],
   bootstrap: [AppComponent],
   entryComponents: [CreateHackerNewsComponent, ArticleDetailComponent]
 })

@@ -18,6 +18,7 @@ import {YoutubePlayerComponent} from './youtube-player/youtube-player.component'
 import {DictionaryComponent} from './dictionary/dictionary.component';
 import {DictionaryPageComponent} from './dictionary-page/dictionary-page.component';
 import {DictionaryDetailComponent} from './dictionary-detail/dictionary-detail.component';
+import {AuthGuard} from './auth.guard';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -35,7 +36,7 @@ const routes: Routes = [
   {path: 'timelines', component: TimelinesComponent},
   {path: 'youtube', component: YoutubePlaylistComponent, children: [{path: ':id', component: YoutubePlayerComponent}]},
   {path: 'dictionary1', component: DictionaryComponent},
-  {path: 'dictionary2', component: DictionaryPageComponent, children: [{path: ':word', component: DictionaryDetailComponent}]}
+  {path: 'dictionary2', component: DictionaryPageComponent, children: [{path: ':word', component: DictionaryDetailComponent, canActivate: [AuthGuard]}]}
   ];
 
 @NgModule({
