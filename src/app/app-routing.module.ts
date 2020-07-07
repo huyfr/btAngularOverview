@@ -12,6 +12,7 @@ import {RatingBarComponent} from './rating-bar/rating-bar.component';
 import {TodoApplicationComponent} from './todo-application/todo-application.component';
 import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
+import {TimelinesComponent} from './timelines/timelines.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path: 'rating-bar', component: RatingBarComponent},
   {path: 'todo', component: TodoApplicationComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'timelines', component: TimelinesComponent}
   ];
 
 @NgModule({

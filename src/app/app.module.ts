@@ -32,6 +32,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { TimelinesComponent } from './timelines/timelines.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { LoginComponent } from './login/login.component';
     TodoApplicationComponent,
     RegisterComponent,
     LoginComponent,
+    TimelinesComponent,
   ],
   imports: [
     BrowserModule,
