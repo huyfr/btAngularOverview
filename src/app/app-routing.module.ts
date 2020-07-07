@@ -13,6 +13,8 @@ import {TodoApplicationComponent} from './todo-application/todo-application.comp
 import {RegisterComponent} from './register/register.component';
 import {LoginComponent} from './login/login.component';
 import {TimelinesComponent} from './timelines/timelines.component';
+import {YoutubePlaylistComponent} from './youtube-playlist/youtube-playlist.component';
+import {YoutubePlayerComponent} from './youtube-player/youtube-player.component';
 
 const routes: Routes = [
   {path: 'pet', component: PetComponent},
@@ -27,7 +29,8 @@ const routes: Routes = [
   {path: 'todo', component: TodoApplicationComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'timelines', component: TimelinesComponent}
+  {path: 'timelines', component: TimelinesComponent},
+  {path: 'youtube', component: YoutubePlaylistComponent, children: [{path: ':id', component: YoutubePlayerComponent}]}
   ];
 
 @NgModule({
