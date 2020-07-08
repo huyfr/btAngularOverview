@@ -41,6 +41,8 @@ import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail
 import { LoginStep1Component } from './login-step1/login-step1.component';
 import {DictionaryService} from './dictionary.service';
 import { LoginStep2Component } from './login-step2/login-step2.component';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {galleryConfig} from './image-gallery/token';
 
 @NgModule({
   declarations: [
@@ -85,9 +87,10 @@ import { LoginStep2Component } from './login-step2/login-step2.component';
     MatProgressBarModule,
     ReactiveFormsModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    ImageGalleryModule
   ],
-  providers: [ArticleService, DictionaryService],
+  providers: [ArticleService, DictionaryService, {provide: galleryConfig, useValue: 2}],
   bootstrap: [AppComponent],
   entryComponents: [CreateHackerNewsComponent, ArticleDetailComponent]
 })
