@@ -43,9 +43,9 @@
   <div class="two fields">
     <div class="field">
       <label>Gender</label>
-        <select class="ui fluid dropdown" formControlName="gender">
-          <option *ngFor="let g of gender" [value]="g">{{g}}</option>
-        </select>
+      <select class="ui fluid dropdown" formControlName="gender">
+        <option *ngFor="let g of gender" [value]="g">{{g}}</option>
+      </select>
       <div *ngIf="submitted && rfc.gender.errors">
         <div *ngIf="rfc.gender.errors.required">Không được để trống giới tính</div>
       </div>
@@ -77,3 +77,5 @@
 
 <p>{{ registerForm.value | json}}</p>
 <p>{{ registerForm.status | json}}</p>
+
+<!--<button class="ui button">Show Modal</button>-->
